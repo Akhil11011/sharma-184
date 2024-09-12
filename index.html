@@ -1,267 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <header>
-    <div class="navbar">
-      <div class="nav-logo border">
-      <div class="logo"></div>
-      </div>
-
-      <div class="nav-address border">
-        <p class="add-first">Deliver to</p>
-        <div class="add-icon">
-          <i class="fa-sharp fa-solid fa-location-dot"></i>
-          <p class="add-sec">India</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/091bbf61ba.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-side">
+        <div class="weather-gradient">
+          <div class="date-container">
+            <h2 class="date-dayname" id="date-dayname">Tuesday</h2>
+            <p class="date-day" id="date-day">19th Feb 2022</p>
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="location"
+              ><span id="city">Puducherry </span>,
+              <span id="country"> IN</span></span
+            >
+          </div>
+          <div class="weather-container">
+            <h1 class="weather-temp"><span id="current-temp">19</span>&degC</h1>
+            <h3 class="weather-desc" id="weather-desc">Sunny</h3>
+          </div>
         </div>
       </div>
-
-          <div class="nav-search border">
-            <select class="search-select">
-            <option> All </option>
-            <input placeholder="search Amazon" class="search-input">
-            <div class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i> 
+      <div class="info-side">
+        <div class="info-container">
+          <div class="today">
+            <div class="clouds">
+              <span class="title">Clouds</span>
+              <span class="value"><span id="clouds">76</span> %</span>
+            </div>
+            <div class="humidity">
+              <span class="title">Humidity</span>
+              <span class="value"><span id="humidity">98</span> %</span>
+            </div>
+            <div class="wind">
+              <span class="title">Wind</span>
+              <span class="value"><span id="wind">ch</span> mph</span>
+            </div>
+            <div class="max-temp">
+              <span class="title">Maximum Temperature</span>
+              <span class="value"><span id="max-temp"> ckj</span> &degC</span>
+            </div>
+            <div class="min-temp">
+              <span class="title">Minimum Temperature</span>
+              <span class="value"><span id="min-temp">kn</span> &degC</span>
+            </div>
+            <div class="pressure">
+              <span class="title">Pressure</span>
+              <span class="value"><span id="pressure">jk</span> hPa</span>
+            </div>
+            <div class="feels-like">
+              <span class="title">Feels Like</span>
+              <span class="value"><span id="feels-like">gh</span> &degC</span>
             </div>
           </div>
-            <div class="nav-signin border">
-              <p><span>Hello, sign in</span></p>
-             <p class="nav-second">Accounts & lits</p>
-            </div>
-        <div class="nav-return border">
-          <p><span>Returns</span></p>
-         <p class="nav-second">& Orders</p>
-      </div>
-      <div class="nav-cart border">
-        <i class="fa-sharp-duotone fa-solid fa-cart-shopping"></i>
-        <p>Cart</p>
-      </div>
-      </div>
-      <div class="panel">
-        <div class="panel-all">
-          <i class="fa-solid fa-bars"></i>
-        ALL
-      </div>
-      <div class="panel-ops">
-      <p> Today's deals</p>
-      <p> Customers Service</p>
-      <p>Registry</p>
-      <p>Gift Cards</p>
-      <p>Sell</p>
-    </div>
-    <div class="panel-deals">
-      <p>Shop deals in Electronics</p>
-
-    </div>
-  </header>
-  <div class="hero-section">
-  <div class="hero-msg">
-    <p> You are on a flipkart com.You can also shop on flipkart india for millions of products with fast local delivery<a href="click here to go flipkart.in" </p>
-  </div>
-</div>
-
-
-  <div class="shop-section">
-    <div class="box1 box border">
-      <div class="box-content">
-     <h2>Hoddie</h2>
-      <div class="box-img" style="background-image:url('box1.jpg') ;"></div>
-      <p>see</p>
-      </div>
-      
-    </div>
-    <div class="box2 box border">
-    <div class="box-content">
-      <h2>Jeans</h2>
-       <div class="box-img" style="background-image:url('image2.jpeg') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box3 box border">
-      <div class="box-content">
-        <h2>Muscle Blaze</h2>
-         <div class="box-img" style="background-image:url('box3.jpg') ;"></div>
-         <p>see</p>
-         </div>
-      </div>
-    <div class="box4 box  border">
-    <div class="box-content">
-      <h2>Shoes</h2>
-       <div class="box-img" style="background-image:url('box4.webp') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box5 box border">
-    <div class="box-content">
-      <h2>Series</h2>
-       <div class="box-img" style="background-image:url('box5.jpg') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box6 box border">
-    <div class="box-content">
-      <h2>Nutrients</h2>
-       <div class="box-img" style="background-image:url('box6.jpg') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box7 box border">
-    <div class="box-content">
-      <h2>Gadgets</h2>
-       <div class="box-img" style="background-image:url('box7.jpg') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-
-    <div class="box8 box border">
-    <div class="box-content">
-      <h2>Shirts</h2>
-       <div class="box-img" style="background-image:url('box8.jpg') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box9 box border">
-    <div class="box-content">
-      <h2>Medical and Healthcare</h2>
-       <div class="box-img" style="background-image:url('box9.webp') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box10 box border">
-    <div class="box-content">
-      <h2>Ports</h2>
-       <div class="box-img" style="background-image:url('box10.webp') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box11 box border">
-      <div class="box-content">
-        <h2>watches</h2>
-         <div class="box-img" style="background-image:url('box11.jpeg') ;"></div>
-         <p>see</p>
-         </div>
-      </div>
-
-      <div class="box12 box border">
-    <div class="box-content">
-      <h2>sports</h2>
-       <div class="box-img" style="background-image:url('box12.webp') ;"></div>
-       <p>see</p>
-       </div>
-    </div>
-    <div class="box13 box border">
-      <div class="box-content">
-        <h2>Phones</h2>
-         <div class="box-img" style="background-image:url('box13.jpg') ;"></div>
-         <p>see</p>
-         </div>
-      </div>
-      <div class="box14 box border">
-        <div class="box-content">
-          <h2>Camera</h2>
-           <div class="box-img" style="background-image:url('box14.jpg') ;"></div>
-           <p>see</p>
-           </div>
-        </div>
-
-        <div class="box15 box border">
-          <div class="box-content">
-            <h2>LED</h2>
-             <div class="box-img" style="background-image:url('box15.webp') ;"></div>
-             <p>see</p>
-             </div>
+          <div class="location-container">
+            <button
+              class="location-button"
+              id="#location-button"
+              onclick="getLocation()"
+            >
+              <i class="fa-solid fa-location-dot"></i> Change Location
+            </button>
           </div>
-          <div class="box16 box border">
-            <div class="box-content">
-              <h2>Perfumes</h2>
-               <div class="box-img" style="background-image:url('box16.webp') ;"></div>
-               <p>see</p>
-               </div>
-            </div>
-  </div>
-    <footer>
-      <div class="foot-panel1">
-        Back to Top
-      </div>
-      <div class="foot-panel2">
-        <ul>
-          <p>Get to know us</p>
-          <a>Carrers</a>
-          <a>Blog</a>
-          <a>About us</a>
-          <a>Investor Relations</a>
-          <a>Flipkart devices</a>
-        </ul>
-    
-      <ul>
-        <p>Group companies</p>
-        <a>Myntra</a>
-        <a>Cleartrip</a>
-        <a>shopsy</a>
-      </ul>
-      <ul>
-        <p>Help</p>
-        <a>Payments</a>
-        <a>Shipping</a>
-        <a>cancellatiom & Returns</a>
-        <a>FAQ</a>
-        <a>Report</a>
-        <a>Infringement</a>
-      </ul>
-      <ul>
-        <p>Consumer policy</p>
-        <a>Returns</a>
-        <a>Terms of use</a>
-        <a>Security</a>
-        <a>Privacy</a>
-        <a>Sitemap</a>
-        <a>Readress</a>
-        <a>EPR</a>
-        <a>Compilance</a>
-      </ul>
-      <hr>
-      <ul><p>Mail us:on Flipkart internet private Limited,
-        <p> Buiding Alyssa,Begonia & </p>
-        <p>Embassy Tech village,outer ring road</p>
-       <p> Bengalru,560103,</p><pre>
-            Karnatka,Inda</pre>
-            <p>Social media on:</p>
-          
-             <i class="fa-brands fa-facebook border"></i>
-            <i class="fa-brands fa-square-instagram border"></i>
-            <i class="fa-sharp fa-solid fa-x border"></i>
-            <i class="fa-brands fa-youtube border"></i></a>
-      </ul>
-      </div>
-    </div>
-    <hr>
-      <div class="foot-panel3">
-      <button> <a href="flipkart border">Flipkart</div></button>
-
-     </div>
-      </div>
-      <div class="foot-panel4">
-        <div class="pages">
-          <a>Conditions of use</a>
-          <a>Privacy Notice</a>
-          <a>Your Ads privacy choices</a>
-          <div class="copyright">
-            1996-2024, <a href="Flipkart.com">flipkart.com</a>,inc or its affilates
-          </div>
-
         </div>
       </div>
-
-
-    </footer>
-  
-  
-    
-</body>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
